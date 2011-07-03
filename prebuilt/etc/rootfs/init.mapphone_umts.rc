@@ -74,6 +74,7 @@ on early-boot
     insmod /system/lib/modules/cpufreq_smartass.ko
     insmod /system/lib/modules/cpufreq_stats.ko
     insmod /system/lib/modules/overclock.ko
+    insmod /system/lib/modules/dsifix.ko
 
 
 # Adjust the out of memory thresholds to account for the larget
@@ -265,9 +266,6 @@ mount rootfs rootfs / ro remount
 
 # Enable panic on softlockup
     write /proc/sys/kernel/softlockup_panic 1
-
-# Set OMAP DSS update_mode to 1 (auto) to get rid of the DSI errors
-    write /sys/devices/omapdss/display0/update_mode 1
 
 # Start services
     exec /system/bin/mot_boot_mode
