@@ -54,6 +54,28 @@ on init
 
 on early-boot
 
+# Install kernel modules
+
+# Install BP related kernel modules
+    #Start the engine modules for netmux first for other daemons depends on it
+    insmod /system/lib/modules/netmux.ko
+    insmod /system/lib/modules/netmux_linkdriver.ko
+    insmod /system/lib/modules/sim.ko
+    insmod /system/lib/modules/modem_pm_driver.ko
+    insmod /system/lib/modules/sec.ko
+
+# Install custom kernel modules
+    insmod /system/lib/modules/mbcache.ko
+    insmod /system/lib/modules/jbd2.ko
+    insmod /system/lib/modules/ext4.ko
+    insmod /system/lib/modules/symsearch.ko
+    insmod /system/lib/modules/cpufreq_interactive.ko
+    insmod /system/lib/modules/cpufreq_conservative.ko
+    insmod /system/lib/modules/cpufreq_smartass.ko
+    insmod /system/lib/modules/cpufreq_stats.ko
+    insmod /system/lib/modules/overclock.ko
+
+
 # Adjust the out of memory thresholds to account for the larget
 # space on sholes.  These numbers are in pages (4k).  Must be kept
 # in sync with init.rc.  This must be done before the regular init.rc
@@ -246,20 +268,6 @@ mount rootfs rootfs / ro remount
 
 # Set OMAP DSS update_mode to 1 (auto) to get rid of the DSI errors
     write /sys/devices/omapdss/display0/update_mode 1
-
-# Install kernel modules
-
-# Install BP related kernel modules
-    #Start the engine modules for netmux first for other daemons depends on it
-    insmod /system/lib/modules/netmux.ko
-    insmod /system/lib/modules/netmux_linkdriver.ko
-    insmod /system/lib/modules/sim.ko
-    insmod /system/lib/modules/modem_pm_driver.ko
-    insmod /system/lib/modules/sec.ko
-
-    insmod /system/lib/modules/mbcache.ko
-    insmod /system/lib/modules/jbd2.ko
-    insmod /system/lib/modules/ext4.ko
 
 # Start services
     exec /system/bin/mot_boot_mode
