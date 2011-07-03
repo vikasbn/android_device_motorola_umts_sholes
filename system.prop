@@ -34,6 +34,7 @@ mot.proximity.delay=450
 #proximit sensor disable touch distance 
 mot.proximity.distance=100
 
+persist.sys.one_percent_batt=1
 
 ## Specific properties available only in CM6 for Milestone
 
