@@ -83,6 +83,7 @@ PRODUCT_LOCALES += hdpi
 
 PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/vold.fstab:system/etc/vold.fstab \
+    device/motorola/umts_sholes/prebuilt/versionBeacon:system/versionBeacon \
     device/motorola/umts_sholes/prebuilt/default.prop:system/default.prop \
     device/motorola/umts_sholes/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml \
     device/motorola/umts_sholes/prebuilt/etc/init.d/10overclock:/system/etc/init.d/10overclock \
