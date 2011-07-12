@@ -81,13 +81,26 @@
 
         <EncoderProfile quality="high" fileFormat="mp4" duration="30">
             <Video codec="h264"
-                   bitRate="6000000"
+                   bitRate="4000000"
                    width="720"
                    height="480"
                    frameRate="25" />
 
             <Audio codec="aac"
                    bitRate="96000"
+                   sampleRate="16000"
+                   channels="1" />
+        </EncoderProfile>
+
+        <EncoderProfile quality="wide" fileFormat="mp4" duration="30">
+            <Video codec="h264"
+                   bitRate="4000000"
+                   width="720"
+                   height="400"
+                   frameRate="25" />
+
+            <Audio codec="aac"
+                   bitRate="64000"
                    sampleRate="16000"
                    channels="1" />
         </EncoderProfile>
