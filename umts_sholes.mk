@@ -123,7 +123,8 @@ PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/prebuilt/lib/modules/sunrpc.ko:/system/lib/modules/sunrpc.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/nfs.ko:/system/lib/modules/nfs.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/jbd.ko:/system/lib/modules/jbd.ko \
-    device/motorola/umts_sholes/prebuilt/lib/modules/jbd2.ko:/system/lib/modules/jbd2.ko
+    device/motorola/umts_sholes/prebuilt/lib/modules/jbd2.ko:/system/lib/modules/jbd2.ko \
+    device/motorola/umts_sholes/prebuilt/lib/modules/qtouch_num.ko:/system/lib/modules/qtouch_num.ko
 
 $(call inherit-product-if-exists, vendor/motorola/umts_sholes/umts_sholes-vendor.mk)
 
