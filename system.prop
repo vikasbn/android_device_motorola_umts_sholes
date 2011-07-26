@@ -57,6 +57,8 @@ ro.config.no_action_on_plug=0
 
 ##
 
+persist.sys.keypad_type=euro_qwerty
+
 windowsmgr.max_events_per_sec=60
 
 # Maximum time (in msec) we allow the CallerInfo query to run,
