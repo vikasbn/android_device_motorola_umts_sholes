@@ -45,10 +45,6 @@ persist.sys.one_percent_batt=1
 # is not a good thing...
 dalvik.vm.dexopt-cache-only=0
 
-# set to 1 if you don't want the screen to turn on when the phone is plugged
-# useful when using a solar power adapter (fluctuating power)
-ro.config.no_action_on_plug=0
-
 ##
 
 persist.sys.keypad_type=euro_qwerty
