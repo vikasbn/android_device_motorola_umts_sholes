@@ -38,9 +38,6 @@ persist.sys.one_percent_batt=1
 
 ## Specific properties available only in CM6 for Milestone
 
-# swap volume keys in landscape mode
-ro.config.volume_keys_rotation=1
-
 # By default, the dalvik-cache of apps in /system is stored in /cache,
 # of apps in /data and sdcard in /data. When set to 1, dalvik-cache of
 # all apps will be stored in /cache.
