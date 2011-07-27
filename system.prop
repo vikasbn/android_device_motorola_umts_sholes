@@ -38,9 +38,6 @@ persist.sys.one_percent_batt=1
 
 ## Specific properties available only in CM6 for Milestone
 
-# set to 0 if you don't use a dock but a case with a magentic closure
-ro.config.dockobserver=1
-
 # swap volume keys in landscape mode
 ro.config.volume_keys_rotation=1
 
