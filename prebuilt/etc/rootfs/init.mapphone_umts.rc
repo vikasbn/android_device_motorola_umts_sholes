@@ -341,6 +341,11 @@ service keypadinit /system/bin/sh /system/bin/init_prep_keypad.sh
     user root
     oneshot
 
+service fivemtinit /system/bin/sh /system/bin/init_fivemt.sh
+    class pre-zygote_services
+    user root
+    oneshot
+
 service usbd /system/bin/usbd
     class pre-zygote_services
     user root
