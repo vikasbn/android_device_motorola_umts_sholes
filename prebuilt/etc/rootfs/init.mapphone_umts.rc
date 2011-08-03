@@ -87,6 +87,7 @@ on early-boot
     insmod /system/lib/modules/cpufreq_stats.ko
     insmod /system/lib/modules/overclock.ko
     insmod /system/lib/modules/dsifix.ko
+    insmod /system/lib/modules/qtouch_num.ko
   
     chmod 0666 /dev/DspBridge
     class_start media_early_init
@@ -270,6 +271,15 @@ on property:persist.sys.one_percent_batt=1
     stop battd
     start batt2d
 
+on property:persist.sys.qtouch_num=2
+    write /proc/qtouch/num_touch 2
+
+on property:persist.sys.qtouch_num=4
+    write /proc/qtouch/num_touch 4
+
+on property:persist.sys.qtouch_num=5
+    write /proc/qtouch/num_touch 5
+
 # Power up to normal
 on property:tcmd.suspend=0
     class_start pre-zygote_services
@@ -336,11 +346,6 @@ service atvc /system/bin/dbvc_atvc_property_set
     oneshot
 
 service keypadinit /system/bin/sh /system/bin/init_prep_keypad.sh
-    class pre-zygote_services
-    user root
-    oneshot
-
-service fivemtinit /system/bin/sh /system/bin/init_fivemt.sh
     class pre-zygote_services
     user root
     oneshot

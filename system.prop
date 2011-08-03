@@ -36,6 +36,10 @@ mot.proximity.distance=100
 
 persist.sys.one_percent_batt=1
 
+persist.sys.qtouch_num=2
+
+persist.sys.keypad_type=euro_qwerty
+
 ## Specific properties available only in CM6 for Milestone
 
 # By default, the dalvik-cache of apps in /system is stored in /cache,
@@ -44,10 +48,6 @@ persist.sys.one_percent_batt=1
 # Use with caution, a lot of free space in /data and almost full /cache
 # is not a good thing...
 dalvik.vm.dexopt-cache-only=0
-
-##
-
-persist.sys.keypad_type=euro_qwerty
 
 windowsmgr.max_events_per_sec=60
 
