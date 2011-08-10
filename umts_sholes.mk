@@ -74,11 +74,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     librs_jni \
-    tiwlan.ini \
-    wlan_cu \
-    wlan_loader \
-    wpa_supplicant.conf \
-    dhcpcd.conf \
     Usb
 
 # we have enough storage space to hold precise GC data
@@ -98,9 +93,13 @@ PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/prebuilt/etc/rootfs/default.prop:/system/etc/rootfs/default.prop \
     device/motorola/umts_sholes/prebuilt/etc/rootfs/init.rc:/system/etc/rootfs/init.rc \
     device/motorola/umts_sholes/prebuilt/etc/rootfs/init.mapphone_umts.rc:/system/etc/rootfs/init.mapphone_umts.rc \
+    device/motorola/umts_sholes/prebuilt/etc/wifi/tiwlan.ini:/system/etc/wifi/tiwlan.ini \
+    device/motorola/umts_sholes/prebuilt/etc/dhcpcd/dhcpcd.conf:/system/etc/dhcpcd/dhcpcd.conf \
     device/motorola/umts_sholes/prebuilt/bin/2nd-init:/system/bin/2nd-init \
     device/motorola/umts_sholes/prebuilt/bin/init_prep_keypad.sh:/system/bin/init_prep_keypad.sh \
     device/motorola/umts_sholes/prebuilt/bin/sh_hijack.sh:/system/bin/sh_hijack.sh \
+    device/motorola/umts_sholes/prebuilt/bin/wlan_cu:/system/bin/wlan_cu \
+    device/motorola/umts_sholes/prebuilt/bin/wlan_loader:/system/bin/wlan_loader \
     device/motorola/umts_sholes/prebuilt/usr/keychars/sholesp2a-keypad-qwerty.kcm.bin:/system/usr/keychars/sholesp2a-keypad-qwerty.kcm.bin \
     device/motorola/umts_sholes/prebuilt/usr/keychars/sholesp2a-keypad-euro-qwerty.kcm.bin:/system/usr/keychars/sholesp2a-keypad-euro-qwerty.kcm.bin \
     device/motorola/umts_sholes/prebuilt/usr/keychars/sholesp2a-keypad-qwertz.kcm.bin:/system/usr/keychars/sholesp2a-keypad-qwertz.kcm.bin \
