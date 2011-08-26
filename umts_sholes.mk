@@ -73,8 +73,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/media_profiles.xml:system/etc/media_profiles.xml
 
 PRODUCT_PACKAGES += \
-    librs_jni \
-    Usb
+    librs_jni
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
@@ -104,6 +103,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/prebuilt/usr/keychars/sholesp2a-keypad-euro-qwerty.kcm.bin:/system/usr/keychars/sholesp2a-keypad-euro-qwerty.kcm.bin \
     device/motorola/umts_sholes/prebuilt/usr/keychars/sholesp2a-keypad-qwertz.kcm.bin:/system/usr/keychars/sholesp2a-keypad-qwertz.kcm.bin \
     device/motorola/umts_sholes/prebuilt/usr/keychars/sholesp2a-keypad-azerty.kcm.bin:/system/usr/keychars/sholesp2a-keypad-azerty.kcm.bin \
+    device/motorola/umts_sholes/prebuilt/app/Usb.apk:/system/app/Usb.apk \
     device/motorola/umts_sholes/prebuilt/app/Toggle2G.apk:/system/app/Toggle2G.apk \
     device/motorola/umts_sholes/prebuilt/app/CM4MMUpdater.apk:/system/app/CM4MMUpdater.apk \
     device/motorola/umts_sholes/prebuilt/lib/modules/slow-work.ko:/system/lib/modules/slow-work.ko \
