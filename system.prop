@@ -55,6 +55,8 @@ windowsmgr.max_events_per_sec=60
 # before giving up and falling back to the default ringtone.
 ro.ringtone_query_wait_time=1500
 
+ro.usb.use_custom_service=1
+
 # Logger properties
 persist.service.aplogd.enable=0
 
