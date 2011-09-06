@@ -63,7 +63,7 @@
 	name##_address = lookup_symbol_address(#name); \
 	if(!name##_address) \
 	{ \
-		printk(KERN_INFO #module ": Could not find symbol: " #name ".\n"); \
+		printk(KERN_ERR #module ": Could not find symbol: " #name ".\n"); \
 		return -EBUSY; \
 	}
 	
@@ -71,7 +71,7 @@
 	sym##_address = lookup_symbol_address(#name); \
 	if(!sym##_address) \
 	{ \
-		printk(KERN_INFO #module ": Could not find symbol: " #name ".\n"); \
+		printk(KERN_ERR #module ": Could not find symbol: " #name ".\n"); \
 		return -EBUSY; \
 	}
 
@@ -79,7 +79,7 @@
 	name = (name##_fp)lookup_symbol_address(#name); \
 	if(!name) \
 	{ \
-		printk(KERN_INFO #module ": Could not find symbol: " #name ".\n"); \
+		printk(KERN_ERR #module ": Could not find symbol: " #name ".\n"); \
 		return -EBUSY; \
 	}
 	
@@ -87,12 +87,16 @@
 	sym = (sym##_fp)lookup_symbol_address(#name); \
 	if(!sym) \
 	{ \
-		printk(KERN_INFO #module ": Could not find symbol: " #name ".\n"); \
+		printk(KERN_ERR #module ": Could not find symbol: " #name ".\n"); \
 		return -EBUSY; \
 	}
 
+
+SYMSEARCH_DECLARE_FUNCTION(unsigned long, lookup_symbol_address, const char *name);
+
 //hijcaking	a function
 //injects a Branch instruction to the function beginning
+//don't forget to lock kernel when hijacking
 
 //ARM MODE only !!!
 
@@ -102,10 +106,8 @@ struct hijack_info
 	unsigned long redirection_address;
 	unsigned long instruction_backup;
 };
-
-SYMSEARCH_DECLARE_FUNCTION(unsigned long, lookup_symbol_address, const char *name);
 	
 struct hijack_info hijack_function(unsigned long hijack_address, unsigned long redirection_address);
 void restore_function(struct hijack_info hijack);
-	
+
 #endif

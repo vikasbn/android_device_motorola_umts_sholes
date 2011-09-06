@@ -20,6 +20,7 @@
  */
  
 #include <linux/module.h>
+#include <linux/io.h>
 #include "symsearch.h"
  
 struct hijack_info hijack_function(unsigned long hijack_address, unsigned long redirection_address)
@@ -31,16 +32,19 @@ struct hijack_info hijack_function(unsigned long hijack_address, unsigned long r
 	hijack.redirection_address = redirection_address;
 	hijack.instruction_backup = *((unsigned long*)(hijack_address));
 	
-	//B redirection_address 
+	//B #redirection_address 
 	//(HEX=0xEA000000 + ((redirection_address - hijack_address + 8)/4 & 0x00FFFFFF) )
-	branch_instr = 0xEA000000 + ((redirection_address - hijack_address + 8)/4 & 0x00FFFFFF);
+	branch_instr = 0xEA000000 + (((redirection_address - (hijack_address + 8))/4) & 0x00FFFFFF);
 	*((unsigned long*)(hijack_address)) = branch_instr;
 	return hijack;
 }
+
 EXPORT_SYMBOL(hijack_function);
 
 void restore_function(struct hijack_info hijack)
 {
 	*((unsigned long*)(hijack.hijack_address)) = hijack.instruction_backup;
 }
+
 EXPORT_SYMBOL(restore_function);
+
