@@ -1,0 +1,3 @@
+[submodule "prebuilt/lib/modules/source_submodule"]
+	path = prebuilt/lib/modules/source_submodule
+	url = git://github.com/a853/a853_modules_froyo.git
