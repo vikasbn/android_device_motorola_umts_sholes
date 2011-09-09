@@ -100,7 +100,7 @@ on early-boot
     insmod /system/lib/modules/overclock.ko
     insmod /system/lib/modules/dsifix.ko
     insmod /system/lib/modules/qtouch_num.ko
-    insmod /system/lib/modules/mot_rndis.ko
+    insmod /system/lib/modules/mot_usb.ko
   
     chmod 0666 /dev/DspBridge
     class_start media_early_init
