@@ -39,6 +39,14 @@ persist.sys.qtouch_num=2
 
 persist.sys.keypad_type=euro_qwerty
 
+# when set to 1, Google Maps NetworkLocationService
+# (designed to be constantly running since gmaps 5.1.0)
+# won't be kept in RAM anymore, unless Google Maps really need it
+#
+# set this property to 0 if you rely on Latitude service
+# to automatically report your location (bye bye, free RAM)
+persist.sys.gmaps_hack=1
+
 ## Specific properties available only in CM6 for Milestone
 
 # By default, the dalvik-cache of apps in /system is stored in /cache,
