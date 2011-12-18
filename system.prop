@@ -47,7 +47,10 @@ persist.sys.keypad_type=euro_qwerty
 # to automatically report your location (bye bye, free RAM)
 persist.sys.gmaps_hack=1
 
-## Specific properties available only in CM6 for Milestone
+# apps to be kept in memory (specified by process name)
+# use with caution, RAM is limited!
+sys.keep_app_1=
+sys.keep_app_2=
 
 # By default, the dalvik-cache of apps in /system is stored in /cache,
 # of apps in /data and sdcard in /data. When set to 1, dalvik-cache of
