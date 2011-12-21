@@ -271,11 +271,6 @@ mount rootfs rootfs / ro remount
 
 # The properties introduced by moto
 
-on property:sys.chargeonly.mode=1
-    start battd
-    start console
-    exec /sbin/charge_only_mode
-
 on property:persist.sys.one_percent_batt=0
     stop batt2d
     start battd
@@ -283,6 +278,10 @@ on property:persist.sys.one_percent_batt=0
 on property:persist.sys.one_percent_batt=1
     stop battd
     start batt2d
+
+on property:sys.chargeonly.mode=1
+    start console
+    exec /system/bin/charge_only_mode
 
 on property:persist.sys.qtouch_num=2
     write /proc/qtouch/num_touch 2

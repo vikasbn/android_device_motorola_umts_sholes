@@ -74,7 +74,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     librs_jni \
-    Usb
+    Usb \
+    mot_boot_mode \
+    charge_only_mode
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
