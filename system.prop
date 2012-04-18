@@ -37,7 +37,7 @@ persist.sys.one_percent_batt=1
 
 persist.sys.qtouch_num=2
 
-persist.sys.keypad_type=euro_qwerty
+persist.sys.keypad_type=qwerty
 
 # when set to 1, Google Maps NetworkLocationService
 # (designed to be constantly running since gmaps 5.1.0)
