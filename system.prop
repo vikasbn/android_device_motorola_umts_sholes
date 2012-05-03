@@ -39,8 +39,6 @@ persist.sys.qtouch_num=2
 
 persist.sys.keypad_type=qwerty
 
-# disabling boot animation by default
-debug.sf.nobootanimation=1
 
 # when set to 1, Google Maps NetworkLocationService
 # (designed to be constantly running since gmaps 5.1.0)
